@@ -3,22 +3,24 @@ const AddProduct= (props) => {
     return (
     <form onSubmit={(event) => props.addProduct(event)}>
         <div className="field">
+        <div className="control">
         <input
         name="name"
         className="input is-large"
         type="text"
-        placeholder="Enter a name"
+        placeholder="Ingresa el nombre del producto"
         required
         value={props.name}
         onChange={props.handleChange}
         />
+        </div>
         </div>
         <div className="field">
         <input
         name="stock"
         className="input is-large"
         type="text"
-        placeholder="Enter stock"
+        placeholder="Ingresa el Stock"
         required
         value={props.stock}
         onChange={props.handleChange}
@@ -29,7 +31,7 @@ const AddProduct= (props) => {
         name="price"
         className="input is-large"
         type="text"
-        placeholder="Enter price"
+        placeholder="Ingresa el precio"
         required
         value={props.price}
         onChange={props.handleChange}
@@ -40,7 +42,7 @@ const AddProduct= (props) => {
         name="trademark"
         className="input is-large"
         type="text"
-        placeholder="Enter trademark"
+        placeholder="Ingresa la marca"
         required
         value={props.trademark}
         onChange={props.handleChange}
@@ -52,17 +54,19 @@ const AddProduct= (props) => {
 
         className="input is-large"
         type="text"
-        placeholder="Enter category"
+        placeholder="Ingresa la categoria"
         required
         value={props.category}
         onChange={props.handleChange}
         />
         </div>
+        <div className="field">
         <input
         type="submit"
-        className="button is-primary is-large is-fullwidth"
-        value="Submit"
+        className="button is-primary is-large is-rounded is-fullwidth"
+        value="Registrar"
         />
+        </div>
         </form>
         )
     };
